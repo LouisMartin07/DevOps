@@ -1,0 +1,12 @@
+FROM alpine:latest
+
+RUN apk update && apk add bash
+
+# Set working directory
+WORKDIR /app
+
+# Copy any files you want to practice transferring
+COPY ./app /app
+
+# Start bash shell when container starts
+CMD ["/bin/bash"]
